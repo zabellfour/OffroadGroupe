@@ -5,6 +5,12 @@
 
 /* Base modules*/
 @import 'base/main';
+
 /* Components */
-@import 'components/starter-box';
+@import 'components/video-box';
+
+/* Layouts */
+@import 'layouts/common';
+@import 'layouts/header';
+@import 'layouts/footer';
 
