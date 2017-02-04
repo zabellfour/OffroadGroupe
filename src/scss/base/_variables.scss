@@ -1,54 +1,54 @@
 // Colors
+$black:                                    #151515;
+$white:                                    #fff;
+$dark:                                     #333;
+$gray:                                     #eaeaea;
+$gray-light:                               #dfdddf;
+$turquoise:                                #1d7c7b;
+$orange:                                   #ee9b11;
 
-$gray: #999;
-$black: #333;
-$white: #fff;
-$light-blue: #39f;
-
-$base-font-sans-serif: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
-$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$base-font-sans-serif:                     'Lato','Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif:                          'Lora','Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Body
-$base-text-color: $black !default;
-$base-background-color: $white !default;
-$base-font-size: 16px !default;
-$base-line-height: 1.2 !default; 
-$base-font-family: $base-font-sans-serif !default;
+$base-text-color:                           $black ;
+$base-background-color:                     $gray-light;
+$base-font-size:                            24px;
+$base-line-height:                          1.50; 
+$base-font-family:                          $base-font-sans-serif ;
 
-$vertical-rhythm: ($base-line-height * 1em);
+$vertical-rhythm:                           ($base-line-height * 1em);
 
-$base-min-width: 320px;
+$base-min-width:                            320px;
 
 // Liks
-$base-link-color: $light-blue;
+$base-link-color:                           $turquoise;
 
 // Buttons
-$btn-color: $white !default;
-$btn-background: $black !default;
-$btn-padding: 0.4em 0.7em !default;
-$btn-font-size: inherit !default;
+$btn-color:                                 $white ;
+$btn-background:                            $turquoise ;
+$btn-padding:                               8px;
+$btn-font-size:                             inherit ;
 
 // Forms
-$form-element-padding: $btn-padding !default;
-$form-element-border-color: $gray !default;
-$form-element-focus-border-color: $black !default;
-$placeholder-color: $gray !default;
+$form-element-padding:                      $btn-padding ;
+$form-element-border-color:                 rgba($gray, .8);
+$form-element-focus-border-color:           $gray;
+$placeholder-color:                         rgba($gray, .8);
 
 // Headers
-$h1-font-size: 30px !default;
-$h2-font-size: 27px !default;
-$h3-font-size: 24px !default;
-$h4-font-size: 21px !default;
-$h5-font-size: 17px !default;
-$h6-font-size: 15px !default;
+$h1-font-size:                              48px ;
+$h2-font-size:                              42px ;
+$h3-font-size:                              36px ;
+$h4-font-size:                              20px ;
+$h5-font-size:                              17px ;
+$h6-font-size:                              15px ;
 
-$headings-font-family: inherit !default;
-$headings-color: inherit !default;
+$headings-font-family:                      inherit ;
+$headings-color:                            inherit ;
 
-
-$animation-speed: 0.3s;
-
-
+$animation-speed:                            0.3s;
+ 
 $breakpoints: (
   'xs-phone': 320px,
   'phone': 480px,
