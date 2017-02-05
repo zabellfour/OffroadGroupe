@@ -4,6 +4,7 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 20;
     @include media('<desktop') {
         padding: 20px 0 0 0;
     }
