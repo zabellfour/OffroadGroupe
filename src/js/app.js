@@ -1,10 +1,12 @@
 import HP from './modules/helpers';
 
-(function ($) {
+(function($) {
 
-  // When DOM is ready
-  $(function () {
-    HP.random(10, 20);
-  });
+    // When DOM is ready
+    $(function() {
+        $(".nav-opener").click(function() {
+            $("body").toggleClass("nav-open");
+        });
+    });
 
 }(jQuery));

@@ -7,12 +7,16 @@
 @import 'base/main';
 
 /* Components */
-@import 'components/video-box';
 @import 'components/google-map';
+@import 'components/promo-box';
+@import 'components/_contact-block';
 
 
 /* Layouts */
 @import 'layouts/common';
 @import 'layouts/header';
 @import 'layouts/footer';
+
+/* Effects */
+@import 'effects/glitch'; 
 

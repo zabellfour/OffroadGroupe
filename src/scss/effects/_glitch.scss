@@ -1,0 +1,76 @@
+.glitch {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    color: white;
+    font-size: 36px;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    transform:rotate(0);
+     animation: rotate 5s infinite linear alternate-reverse;
+    *{
+      text-align: center;
+    }
+}
+
+@keyframes rotate{
+   $steps: 50;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            transform: rotate((random(3)-3)+deg);
+        }
+    } 
+}
+
+@keyframes noise-anim {
+    $steps: 20;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+        }
+    }
+}
+
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+     left: 50%;
+   transform:translate(-50.8%);
+    text-shadow: -1px 0 red;
+    top: -1px;
+    color: white;
+    background: transparent;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+     text-align: center;
+     white-space: nowrap;
+}
+
+@keyframes noise-anim-2 {
+    $steps: 20;
+    @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+            clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+        }
+    }
+}
+
+.glitch:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 50%;
+    transform:translate(-49.8%);
+    text-shadow: 1px 0 blue;
+    top: 1px;
+    color: white;
+    background: transparent;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+    text-align: center;
+}

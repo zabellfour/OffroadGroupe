@@ -31,3 +31,7 @@ img {
     pointer-events:none;
   }
 }
+
+.resize-active * {
+ transition: none !important;
+}
