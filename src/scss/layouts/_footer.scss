@@ -26,14 +26,23 @@
 	max-width: 100%;
 }
 
-
 .right-side {
 	margin-left: 50%;
 	padding-left: 90px;
+	padding-top: 60px;
 	.bottom-side {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		padding-bottom: 100px;
+		a, p {
+			color: $white;
+			font-size: 16px;
+			font-weight: 400;
+		}
+		a {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -42,10 +51,13 @@
 	width: 100%;
 	justify-content: space-between;
 	text-transform: uppercase;
-	@extend %clearfix;
+	margin-bottom: 100px;
+	@extend %listreset;
 	a {
 		color: $white;
 		text-decoration: none;
+		font-size: 20px;
+		font-weight: 500;
 	}
 	li {
 		display: inline-block;
@@ -56,27 +68,34 @@
 	display: flex;
 	width: 50%;
 	flex-direction: column;
+	.tittle {
+		display: inline-block;
+		font-size: 20px;
+		font-weight: 500;
+		color: $orange;
+		margin-bottom: 30px;
+	}
 	.tel-block, .mail-block {
 		position: relative;
+		display: flex;
+		flex-direction: column;
 		padding-left: 35px;
+		margin-bottom: 25px;
 		.icon {
 			position: absolute;
-			top: 0;
+			top: 3px;
 			left: 0;
 			color: $orange;
-		}
-	}
-	.tel-block {
-		a {
-			display: inline-block;
-			width: 100%;
+			font-size: 20px;
 		}
 	}
 	.mail-block {
+
 	}
 	address {
 		p {
 			margin: 0;
+			color: $orange;
 		}
 	}
 }
@@ -89,12 +108,21 @@
 
 .social-list {
 	text-align: right;
+	margin-bottom: 20px;
+	@extend %listreset;
 	li {
 		display: inline-block;
+		margin-left: 15px;
 	}
 	a {
-		color: $white;
 		text-decoration: none;
+		i {
+			font-size: 32px;
+			transition: color .5s;
+			&:hover {
+				color: $orange;
+			}
+		}
 	}
 }
 

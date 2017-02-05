@@ -2,74 +2,101 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Title</title>
-  <link media="all" rel="stylesheet" href="build/css/vendor.min.css">
-  <link media="all" rel="stylesheet" href="build/css/style.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title</title>
+    <link media="all" rel="stylesheet" href="build/css/vendor.min.css">
+    <link media="all" rel="stylesheet" href="build/css/style.min.css">
 </head>
 
 <body>
   <div id="wrapper">
-
-
-
-<footer id="footer">
-  <div class="container full-width dark">
-    <div class="img-bg" style="background-image: url(build/images/general/footer-img-bg.jpg)";></div>
-    <div class="container">
-      <div class="footer-logo">
-      <a href="#"><img src="build/images/general/logo-small.png" height="60" width="200" alt=""></a>
-      </div>
-      <div class="right-side">
-        <ul class="footer-nav">
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Новости</a></li>
-          <li><a href="#">Галерея</a></li>
-          <li><a href="#">Магазин</a></li>
-          <li><a href="#">Услуги</a></li>
-        </ul>
-        <div class="bottom-side">
-          <div class="contact-info">
-            <span class="tittle">
-              OFFROAD GROUPE
-            </span>
-            <div class="tel-block">
-               <span class="icon icon-phone"></span>
-               <a href="tel:0975556464">097-555-64-64</a>
-               <a href="tel:0975556464">097-555-64-64</a>
-            </div>
-            <div class="mail-block">
-              <span class="icon icon-mail"></span>
-              <a href="mailto:&#111;&#102;&#102;&#114;&#111;&#97;&#100;&#103;&#114;&#111;&#117;&#112;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#111;&#102;&#102;&#114;&#111;&#97;&#100;&#103;&#114;&#111;&#117;&#112;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>
-            </div>
-            <address>
-              <p>г. Харьков,</p>
-              <p>Московский проспект 299</p>
-            </address>
+      <header id="header">
+          <div class="container">
+              <div class="header-holder">
+                  <a href="#" class="logo"><img src="build/images/logo.png" alt="offroad groupe"></a>
+                  <ul class="header-menu">
+                      <li class="active"><a href="#">О нас</a></li>
+                      <li><a href="#">Новости</a></li>
+                      <li><a href="#">Галерея</a></li>
+                      <li><a href="#">Магазин</a></li>
+                      <li><a href="#">Услуги</a></li>
+                  </ul>
+              </div>
           </div>
-          <div class="bottom-right">
-            <div class="social-block">
-              <ul class="social-list">
-                <li><a href=""><i class="icon-instagram"></i></a></li>
-                <li><a href=""><i class="icon-facebook"></i></a></li>
-                <li><a href=""><i class="icon-youtube"></i></a></li>
-                <li><a href=""><i class="icon-twitter"></i></a></li>
-              </ul>
-            </div>
-            <div class="copy-row">
-              <p>copyright 2016 - Offroad Group</p>
-              <p>created by Bato studio</p>
-            </div>
-          </div>
+      </header>
+      <div class="map-box">
+        <div class="map">
+            <div class="map-canvas" data-markers="build/inc/markers.json"></div>
         </div>
       </div>
-    </div>     
-  </div>  
-</footer>
-  </div>
-  <script src="build/js/vendor.min.js"></script>
-  <script src="build/js/app.min.js"></script>
-</body>
+      <footer id="footer">
+        <div class="container full-width dark">
+          <div class="img-bg" style="background-image: url(build/images/general/footer-img-bg.jpg)";>
+          </div>
+          <div class="container">
+            <div class="footer-logo">
+            <a href="#"><img src="build/images/general/logo-small.png" height="60" width="200" alt=""></a>
+            </div>
+            <div class="right-side">
+              <ul class="footer-nav">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Галерея</a></li>
+                <li><a href="#">Магазин</a></li>
+                <li><a href="#">Услуги</a></li>
+              </ul>
+              <div class="bottom-side">
+                <div class="contact-info">
+                  <span class="tittle">
+                    OFFROAD GROUPE
+                  </span>
+                  <div class="tel-block">
+                     <span class="icon icon-phone"></span>
+                     <a href="tel:0975556464">097-555-64-64</a>
+                     <a href="tel:0975556464">097-555-64-64</a>
+                  </div>
+                  <div class="mail-block">
+                    <span class="icon icon-mail"></span>
+                    <a href="mailto:&#111;&#102;&#102;&#114;&#111;&#97;&#100;&#103;&#114;&#111;&#117;&#112;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#111;&#102;&#102;&#114;&#111;&#97;&#100;&#103;&#114;&#111;&#117;&#112;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>
+                  </div>
+                  <address>
+                    <p>г. Харьков,</p>
+                    <p>Московский проспект 299</p>
+                  </address>
+                </div>
+                <div class="bottom-right">
+                  <div class="social-block">
+                    <ul class="social-list">
+                      <li><a href="#"><i class="icon-instagram"></i></a></li>
+                      <li><a href="#"><i class="icon-facebook"></i></a></li>
+                      <li><a href="#"><i class="icon-youtube"></i></a></li>
+                      <li><a href="#"><i class="icon-twitter"></i></a></li>
+                    </ul>
+                  </div>
+                  <div class="copy-row">
+                    <p>copyright 2016 - Offroad Group</p>
+                    <p>created by Bato studio</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>     
+        </div>  
+      </footer>
+    </div>
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDyo1auEsL-JHVfP_uni2oQz03Z2uQ8OE8&extension=.js'></script>
+    <script src="build/js/vendor.min.js"></script>
+    <script src="build/js/app.min.js"></script>
+    <script src="build/js/custom-map.js"></script>
+    <script type="text/javascript">
+            $('.map-box').click(function () {
+                $('.map-box .map-canvas').css("pointer-events", "auto");
+            });
 
+            $( ".map-box" ).mouseleave(function() {
+              $('.map-box .map-canvas').css("pointer-events", "none"); 
+            }); 
+    </script>
+  </body>
 </html>
