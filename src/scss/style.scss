@@ -7,10 +7,12 @@
 @import 'base/main';
 
 /* Components */
-@import 'components/video-box';
+@import 'components/promo-box';
 
 /* Layouts */
 @import 'layouts/common';
 @import 'layouts/header';
 @import 'layouts/footer';
 
+/* Effects */
+@import 'effects/glitch'; 
