@@ -1,5 +1,7 @@
 .contact-block {
 	background-color: $dark;
+	position: relative;
+	z-index: 11;
 	.container {
 		padding: 115px 205px 90px 205px;
 		@extend %clearfix;

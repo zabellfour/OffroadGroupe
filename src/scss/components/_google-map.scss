@@ -1,6 +1,8 @@
 #map {
 	height: 780px;
 	width: 100%;
+  position: relative;
+  z-index: 100;
 	@include media('<widescreen') {
        height: 500px;
     }

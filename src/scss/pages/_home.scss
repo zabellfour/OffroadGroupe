@@ -1,0 +1,186 @@
+.text-img-lg {
+    @extend %clearfix;
+    padding: 130px 0 0 0;
+    position: relative;
+    margin-bottom: 200px;
+    @include media('<widescreen') {
+        padding: 100px 0 0 0;
+        margin-bottom: 100px;
+    }
+    @include media('<desktop') {
+        padding: 70px 0 0 0;
+        margin-bottom: 70px;
+    }
+    @include media('<tablet') {
+        padding: 50px 0 0 0;
+        margin-bottom: 50px;
+    }
+    .img-holder {
+        width: 50%;
+        float: left;
+        @include media('<phone') {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+    .text-holder {
+        width: 50%;
+        float: left;
+        padding-top: 138px;
+        @include media('<widescreen-xl') {
+            padding-top: 50px;
+        }
+        @include media('<tablet') {
+            width: 100%;
+        }
+        @include media('<widescreen') {
+            padding-top: 20px;
+        }
+        .logo-holder {
+            margin-bottom: 30px;
+            padding-left: 50px;
+            @include media('<widescreen-xl') {
+                margin-bottom: 10px;
+            }
+            @include media('<tablet') {
+                position: absolute;
+                top: 50px;
+                right: 0px;
+                max-width: 50%;
+            }
+            img {
+                vertical-align: top;
+                @include media('<tablet') {
+                    width: 100%;
+                }
+            }
+        }
+        .text-box {
+            padding: 50px 100px;
+            margin-left: -50px;
+            background-color: rgba($white, .15);
+            @include media('<widescreen-xl') {
+                padding: 20px 40px;
+            }
+            @include media('<widescreen') {
+                padding: 10px;
+                font-size: 18px;
+            }
+            @include media('<tablet') {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.quad-box {
+    @extend %clearfix;
+    padding-left: 78px;
+    margin-bottom: 133px;
+    @include media('<desktop') {
+        padding-left: 0;
+    }
+    .h3 {
+        text-align: center;
+        display: inline-block;
+        padding: 10px;
+        min-width: 590px;
+        text-transform: uppercase;
+        background-color: rgba($turquoise, .9);
+        color: $white;
+        margin: 0 0 0 78px;
+        @include media('<widescreen-lg') {
+            margin: 0;
+            min-width: 400px;
+        }
+    }
+    &-row {
+        @extend %clearfix;
+        margin-top: -40px;
+        img {
+            vertical-align: top;
+        }
+        &:first-child {
+            padding: 0 62px;
+        }
+        .cell-holder {
+            float: left;
+            width: 50%;
+            img {
+                width: 100%;
+            }
+               @include media('<tablet') {
+            width: 100%;
+             
+             }
+            		
+        }
+        .zix4 {
+            width: 52%;
+            @include media('<tablet') {
+                margin: 0 0 10px;
+                width: 100%;
+            }
+        }
+        .zix1 {
+            width: 48%;
+            margin-top: 50px;
+            margin-left: -70px;
+            @include media('<widescreen') {
+                margin-top: 10px;
+                margin-left: -30px;
+            }
+            @include media('<tablet') {
+                margin: 0 0 10px;
+                width: 100%;
+            }
+        }
+        .zix5 {
+            width: 45%;
+            margin-left: 5%;
+            margin-top: -80px;
+            @include media('<widescreen') {
+                margin-left: 1%;
+                margin-top: -59px;
+            }
+            @include media('<tablet') {
+                margin: 0 0 10px;
+                width: 100%;
+            }
+        }
+    }
+    .text-holder {
+        margin-top: -40px;
+        background-color: rgba($white, .15);
+        padding: 50px 70px;
+        margin-left: -60px;
+        @include media('<widescreen') {
+            padding: 20px 20px 40px 40px;
+            margin-left: -30px;
+        }
+         @include media('<tablet') {
+        	margin-left: 0;
+         
+         }
+        		
+    }
+    .default-list {
+        @extend %listreset;
+        li {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: -10px;
+                width: 6px;
+                margin-top: -1px;
+                height: 2px;
+                background-color: $white;
+            }
+        }
+    }
+}
