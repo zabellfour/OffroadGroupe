@@ -2,10 +2,12 @@
 $black:                                    #151515;
 $white:                                    #fff;
 $dark:                                     #333;
+$dark1:                                    #1c1c1a;
 $gray:                                     #eaeaea;
 $gray-light:                               #dfdddf;
 $turquoise:                                #1d7c7b;
 $orange:                                   #ee9b11;
+
 
 $base-font-sans-serif:                     'Lato','Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
 $base-font-serif:                          'Lora','Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
@@ -54,7 +56,9 @@ $breakpoints: (
   'phone': 480px,
   'tablet': 768px,
   'desktop': 1024px,
-  'widescreen': 1200px
+  'widescreen': 1200px,
+  'widescreen-lg': 1400px,
+  'widescreen-xl': 1500px,
 );
 
 // keywords

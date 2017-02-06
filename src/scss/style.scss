@@ -9,7 +9,7 @@
 /* Components */
 @import 'components/google-map';
 @import 'components/promo-box';
-@import 'components/_contact-block';
+@import 'components/contact-block';
 
 
 /* Layouts */
@@ -19,4 +19,7 @@
 
 /* Effects */
 @import 'effects/glitch'; 
+
+/* Pages */
+@import 'pages/home'; 
 
