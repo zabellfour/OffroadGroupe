@@ -1,0 +1,109 @@
+.contact-block {
+	background-color: $dark;
+	.container {
+		padding: 115px 205px 90px 205px;
+		@extend %clearfix;
+	}
+	.social-block {
+		width: 100%;
+		float: left;
+		.social-list {
+			text-align: center;
+			li {
+				a {
+					color: $gray;
+				}
+			}
+		}
+	}
+}
+
+.contact-info-side {
+	width: 45%;
+	float: left;
+	margin-bottom: 90px;
+	h3, a, p, address {
+		color: $gray;
+		text-decoration: none;
+	}
+	h3{
+		font-size: 48px;
+		font-weight: 500;
+		line-height: 1;
+	}
+	p {
+		font-size: 400;
+		font-weight: 400;
+	}
+	.contact-info {
+		.tel-block, .mail-block {
+			padding: 0;
+		}
+		.tel-block {
+			a {
+				font-weight: 900;
+				font-size: 30px;
+			}
+		}
+		.mail-blok {
+			a {
+				font-weight: 700;
+				font-size: 30px;
+			}
+		}
+		address {
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 1;
+			white-space: nowrap;
+		}
+	}
+}
+
+.form-side {
+	width: 45%;
+	float: right;
+	.form-control {
+		padding: 15px 30px;
+		width: 100%;
+		margin-bottom: 25px;
+		border: 1px solid darken( $gray, 50% );
+		background-color: inherit;
+		color: $gray;
+		@include placeholder {
+    	color: $gray;
+    	font-family: $base-font-serif;
+    	font-style: italic;
+    	font-size: 24px;
+   		}
+	}
+	textarea {
+		margin-bottom: 40px !important;
+		resize: none;
+	}
+	button {
+		width: 100%;
+		padding: 15px 30px;
+	}
+}
+
+.btn {
+	background-color: $turquoise;
+	text-align: center;
+	border: 0;
+	font-weight: 500;
+	font-size: 28px;
+	color: $gray;
+	transition: all .5s;
+	&:hover {
+		background-color: darken( $gray, 50% );
+		color: $white;
+	}
+}
+
+.divider {
+	width: 90%;
+	height: 1px;
+	background-color: darken( $gray, 50% );
+	margin: 49px 0 80px 0;
+}

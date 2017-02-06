@@ -1,6 +1,15 @@
 #map {
 	height: 780px;
 	width: 100%;
+	@include media('<widescreen') {
+       height: 500px;
+    }
+    @include media('<desktop') {
+        height: 400px;
+    }
+    @include media('<phone') {
+       height: 300px;
+    }
 }
 
 

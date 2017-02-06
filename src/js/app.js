@@ -45,7 +45,7 @@ var myLatLng = {lat: 49.947804, lng: 36.397481};
   });
 
 var image = {
-        url: 'build/images/general/logo-map-marker.png'
+        url: 'build/images/logo-map-marker.png'
     };
 
 
