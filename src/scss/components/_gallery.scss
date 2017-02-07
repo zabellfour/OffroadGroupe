@@ -1,0 +1,168 @@
+.gallery {
+    background-image: url(../images/texture.jpg);
+    background-repeat: repeat;
+    background-position: 0 0;
+    padding: 132px 0;
+    .images-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .fancybox {
+            width: 24.5%;
+            margin-bottom: 16px;
+            position: relative;
+            &:before {
+                @include animate(opacity transform);
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                content: "\e907";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba($turquoise, .5);
+                opacity: 0;
+                z-index: 2;
+                font-family: 'icomoon' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                transform: scale(0) rotate(0deg);
+                font-size: 40px;
+            }
+            &:after {
+                @include animate(opacity);
+                content: '';
+                width: 84px;
+                height: 84px;
+                background-color: rgba($turquoise, .7);
+                border-radius: 50%;
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                justify-content: center;
+                opacity: 0;
+            }
+            &:hover {
+                &:before {
+                    opacity: 1;
+                    transform: scale(1) rotate(0deg);
+                }
+                &:after {
+                    opacity: 1;
+                }
+            }
+            @include media('<tablet') {
+                width: 49.5%;
+            }
+            @include media('<phone') {
+                width: 48.5%;
+            }
+            img {
+                width: 100%;
+                vertical-align: top;
+            }
+        }
+    }
+    .videos-wrapper {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;	
+        justify-content: space-between;
+        .fancybox {
+            width: 49.75%;
+            position: relative;	
+            margin-bottom: 16px;
+            max-height: 390px;
+            overflow: hidden;
+             &:before {
+                @include animate(opacity transform);
+                color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                content: "\e901";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba($turquoise, .5);
+                opacity: 0;
+                z-index: 2;
+                font-family: 'icomoon' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                transform: scale(0) rotate(0deg);
+                font-size: 40px;
+            }
+            &:after {
+            	@include animate(opacity);
+                content: '';
+                width: 84px;
+                height: 84px;
+                background-color: rgba($turquoise, .7);
+                border-radius: 50%;
+                display: inline-block;	
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                justify-content: center;
+                opacity: 0;
+            }
+            &:hover {
+                &:before {
+                    opacity: 1;
+                    transform: scale(1) rotate(0deg);
+                }
+                &:after {
+                	opacity: 1;
+                }
+            }
+            img {
+                width: 100%;
+                vertical-align: top;
+            }
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#fancybox-loading div {
+    background: url(../images/fancybox_loading.gif) center center no-repeat;
+}
+
+#fancybox-loading,
+.fancybox-close,
+.fancybox-prev span,
+.fancybox-next span {
+    background-image: url(../images/fancybox_sprite.png);
+}
+
+.fancybox-nav {
+    background: transparent url(../images/blank.gif);
+}
+
+.fancybox-overlay {
+    background: url(../images/fancybox_overlay.png);
+}
