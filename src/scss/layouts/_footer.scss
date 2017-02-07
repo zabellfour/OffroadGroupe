@@ -72,6 +72,9 @@
 			color: $white;
 			font-size: 16px;
 			font-weight: 400;
+			@include media('<widescreen') {
+           	font-size: 14px;
+        	}
 			@include media('<tablet') {
            		font-size: 13px;
         	}

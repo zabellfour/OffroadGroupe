@@ -1,0 +1,248 @@
+.news {
+	position: relative;
+	z-index: 11;
+	padding-top: 200px;
+	padding-bottom: 150px;
+	background: $white;
+	@include media('<widescreen') {
+			padding-top: 120px;
+       		padding-bottom: 100px;
+    	}
+    	@include media('<desktop') {
+    		padding-top: 60px;
+        	padding-bottom: 50px;
+    	}
+		@include media('<tablet') {
+			padding-top: 30px;
+        	padding-bottom: 25px;
+    	}
+	.container {
+		@extend %clearfix;
+	}
+	.section-title-row {
+		width: 100%;
+		.title-holder {
+			width: 50%;
+			@include media('<tablet') {
+           		width: 100%;
+        	}
+		}
+		h3 {
+		width: 50%;	
+		position: relative;
+		z-index: 500;
+		text-align: center;
+	    display: inline-block;
+	    padding: 42px;
+	    text-transform: uppercase;
+	    background-color: rgba(29, 124, 123, 0.9);
+	    color: #fff;
+	    margin: 0;
+	    margin-left: 24%; 
+	    @include media('<widescreen') {
+           		font-size: 30px;
+           		padding: 24px;
+        	}
+    	@include media('<desktop') {
+           		font-size: 24px;
+           		padding: 18px;
+        	}
+        @include media('<tablet') {
+           		font-size: 18px;
+        	}
+		}	
+	}
+}
+
+.thumbs-holder {
+	position: relative;
+	margin-top: -69px;
+	@include media('<widescreen') {
+        margin-top: -46px;
+    }
+    @include media('<desktop') {
+        margin-top: -36px;
+    }
+}
+
+.news-thumb {
+		width: 49%;
+		float: left;
+		margin-bottom: 110px;
+		@include media('<widescreen') {
+       		margin-bottom: 70px;
+    	}
+    	@include media('<desktop') {
+        	margin-bottom: 35px;
+    	}
+		@include media('<tablet') {
+        	width: 100%;
+    	}
+	&:nth-child(odd) {
+		margin-right: 2%;
+		}
+	.divider {
+		width: 25px;
+		background-color: $black;
+		margin: -25px 0px 30px 0px;
+
+	}
+}
+
+
+.news-picture {
+	position: relative;
+	img {
+		width: 100%;
+		height: auto;
+	}
+	.picture-overlay {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 12%;
+		background:rgba(255,255,255, 0.7);
+	}
+}
+
+.news-date {
+	position: absolute;
+	bottom: 100px;
+	left: 60px;
+	font-size: 22px;
+	font-family: $base-font-serif;
+	font-weight: 700;
+	color: $white;
+	@include media('<widescreen') {
+        font-size: 20px;
+        bottom: 60px;
+		left: 30px;
+    }
+    @include media('<tablet') {
+        font-size: 16px;
+        bottom: 100px;
+		left: 60px;
+    }
+}
+
+.news-title {
+	@extend %clearfix;
+	padding-left: 60px;
+	strong {
+		display: inline-block;
+		position: relative;
+		top: -34px;
+		font-size: 42px;
+		font-family: $base-font-serif;
+		font-weight: 700;
+		line-height: 1;
+		color: $black;
+		@include media('<widescreen') {
+        	font-size: 30px;
+        }
+    	@include media('<desktop') {
+    		font-size: 24px;	
+        	top: -24px;
+        }
+        @include media('<tablet') {
+           	top: -34px;
+        }
+        @include media('<phone') {
+           font-size: 18px;
+           top: -24px;
+        }
+	}
+}
+
+.news-content {
+	min-height: 185px;
+	position: relative;
+		@include media('<widescreen') {
+           font-size: 20px;
+           margin-bottom: 35px;
+        }
+    	@include media('<desktop') {
+           font-size: 16px;
+           margin-bottom: 25px;
+           min-height: 125px;
+        }
+        @include media('<tablet') {
+           font-size: 13px;
+           margin-bottom: 20px;
+           min-height: 90px;
+        }
+	p {
+		margin-bottom: 45px;
+		@include media('<widescreen') {
+           font-size: 20px;
+           margin-bottom: 35px;
+        }
+    	@include media('<desktop') {
+           font-size: 16px;
+           margin-bottom: 25px;
+        }
+        @include media('<tablet') {
+           font-size: 13px;
+           margin-bottom: 20px;
+        }
+	}
+	.news-link {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		font-family: $base-font-serif;
+		font-weight: 700;
+		font-style: italic;
+		@include media('<widescreen') {
+           font-size: 20px;
+        }
+    	@include media('<desktop') {
+           font-size: 16px;
+        }
+        @include media('<phone') {
+           font-size: 13px;
+        }
+	}
+}
+
+.link-to-page {
+	padding-left: 90px;
+	display: inline-block;
+	float: left;
+	position: relative;
+	text-decoration: none;
+	font-size: 28px;
+	font-weight: 700;
+	color: $dark;
+	transition: color .5s;
+	@include media('<widescreen') {
+           font-size: 24px;
+        }
+    	@include media('<desktop') {
+           font-size: 20px;
+           padding-left: 65px;
+        }
+        @include media('<tablet') {
+           font-size: 16px;
+        }
+	&:hover {
+		color: $turquoise;
+
+	}
+	i{
+		position: absolute;
+		font-size: 78px;
+		left: 0;
+		top: -42%;
+		@include media('<widescreen') {
+           top: -55%;
+        }
+        @include media('<desktop') {
+           font-size: 54px;
+           top: -38%;
+        }
+        @include media('<tablet') {
+           top: -58%;
+        }
+	}
+}
