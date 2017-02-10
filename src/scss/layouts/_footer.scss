@@ -201,6 +201,9 @@
 	}
 	a {
 		text-decoration: none;
+		&:hover {
+				color: $orange;
+			}
 		i {
 			font-size: 32px;
 			transition: color .5s;
@@ -210,9 +213,6 @@
         	@include media('<phone') {
            		font-size: 16px;
         	}
-			&:hover {
-				color: $orange;
-			}
 		}
 	}
 }

@@ -1,25 +1,39 @@
 $gray-semi-light:                               #e4e4e4;
 
 
-
-
 .dark-header {
 	background-color: $dark1;
-	.header-holder {
-		padding-bottom: 148px;
-	}
 }
 .text-image {
-	margin-top: 265px;
-	margin-bottom: 115px;
-	position: relative;
+	padding-top: 265px;
+	padding-bottom: 115px;
 	background-color: $dark1;
-	.logo {
-		position: absolute;
-		left: 0;
-		top: 0;
+	position: relative;
+	@include media('<widescreen') {
+    	padding-top: 165px;
+		padding-bottom: 90px;       
+    }
+	@include media('<desktop') {
+	    padding-top: 100px;
+		padding-bottom: 45px;       
+    }
+	@include media('<tablet') {
+	    padding-top: 50px;
+		padding-bottom: 25px;       
+    }
+	@include media('<phone') {
+    	padding-top: 50px;
+		padding-bottom: 25px;       
+    }
+	.full-width {
+		position: relative;
+		@extend %clearfix;
+		@include media('<desktop') {
+           display: flex;
+           flex-direction: column;
+		}
 	}
-	.img-side {
+	.video-side {
 		position: absolute;
 		width: 50%;
 		top: 0;
@@ -28,23 +42,110 @@ $gray-semi-light:                               #e4e4e4;
 		left: 50%;
 		background-size: cover;
 		position: 50% 50%;
+		@include media('<widescreen') {
+           
+    		}
+		@include media('<desktop') {
+           position: relative;
+           width: 100%;
+           padding-bottom: calc(100% - 50%);
+           left: 0;
+		    }
 		@include media('<tablet') {
-			display: none;
+           
+		    }
+		@include media('<phone') {
+		           
+		    }
+    	.video-holder {
+    		width: 100%;
+    		height: 100%;
+    		position: relative;
+    		overflow: hidden;
+    		.full-screen-video {
+    			position: absolute;
+    			z-index: 10;
+    		}
     	}
 	}
 	.text-side {
 		width: 50%;
-		padding: 50px;
+		padding-top: 230px;
+		padding-right: 75px;
+		position: relative;
+		@include media('<widescreen') {
+    		padding-top: 130px;
+			padding-right: 35px;
+		    }
+		@include media('<desktop') {
+			padding-top: 100px;
+			width: 100%;           
+		    }
 		@include media('<tablet') {
-			width: 100%;
-    	}
+		           
+		    }
+		@include media('<phone') {
+		           
+		    }
 		p {
 			font-weight: 400;
 			font-size: 26px;
 			color: $white;
+			text-indent: 35px;
+			margin-bottom: 0;
+			@include media('<widescreen') {
+           		font-size: 24px;
+			    }
+			@include media('<desktop') {
+				font-size: 20px;
+				margin-bottom: 20px;           
+			    }
+			@include media('<tablet') {
+				font-size: 16px;           
+			    }
+			@include media('<phone') {
+				font-size: 14px;           
+			    }
+		}
+		.logo {
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include media('<widescreen') {
+           width: 400px;
+           height: 130px;
+		    }
+		@include media('<desktop') {
+		    width: 200px;
+           	height: 80px;
+           	top: 10%;
+		    }
+		@include media('<tablet') {
+		    width: 180px;
+           	height: 60px;       
+		    }
+		@include media('<phone') {
+		    width: 100px;
+           	height: 30px;       
+		    }
 		}
 	}
 }
+
+.photos-block {
+	background-color: $gray-semi-light;
+	padding: 120px 0;
+	.panorama-img {
+		width: 100%;
+		margin-bottom: 20px;
+		img {
+			width: 100%;
+			height: auto;
+			vertical-align: top;
+		}
+	}
+}
+
 
 .photos-block {
 	background-color: $gray-semi-light;
@@ -68,14 +169,20 @@ $gray-semi-light:                               #e4e4e4;
 			&:first-child {
 				float: left;
 			}
-			.panorama-img-sm {
-			width: 100%;
-			max-height: 385px;
-			margin-bottom: 20px;
-			img {
+			&:last-child {
+				@include media('<desktop') {
 				width: 100%;
-				height: auto;
-				vertical-align: top;
+				margin-top: 20px;      
+		    	}
+			}
+			.panorama-img-sm {
+				width: 100%;
+				max-height: 385px;
+				margin-bottom: 19px;
+				img {
+					width: 100%;
+					height: auto;
+					vertical-align: top;
 				}
 			}
 			.portret-img-lg {
@@ -88,8 +195,8 @@ $gray-semi-light:                               #e4e4e4;
 				}
 			}
 			.portret-img-sm {
-			width: calc(50% - 10px);
-			max-height: 385px;
+				width: calc(50% - 10px);
+				max-height: 385px;
 				img {
 					width: 100%;
 					height: auto;
@@ -100,26 +207,98 @@ $gray-semi-light:                               #e4e4e4;
 	}
 }
 
+
 .text-block {
 	background-color: $dark1;
 	.container {
 		@extend %clearfix;
-		padding: 140px 0;
+		padding: 140px 15px;
 		position: relative;
+		@include media('<desktop') {
+        	padding: 80px 15px;		   
+	    	}
+		@include media('<tablet') {
+	        padding: 60px 15px;   
+	    	}
+		@include media('<phone') {
+        	padding: 40px 15px;   
+    	}
 	}
 	.logo {
 		position: absolute;
 		left: 5%;
 		top: 50%;
 		transform: translateY(-50%);
+		@include media('<widescreen') {
+           width: 400px;
+           height: 130px;
+		}
+		@include media('<desktop') {
+		    width: 200px;
+           	height: 80px;       
+		}
+		@include media('<tablet') {
+		    width: 120px;
+           	height: 60px;
+           	top: 8%;
+           	left: 2%;
+           	transform: translateY(0);       
+		}
+		@include media('<phone') {
+		    width: 80px;
+           	height: 30px;       
+		}
 	}
 	p {
-		width: 50%;
 		display: inline-block;
+		width: 50%;
+		font-size: 32px;
 		color: $white;
 		margin-bottom: 0;
+		@include media('<widescreen') {
+        	font-size: 26px; 
+    	}
+		@include media('<desktop') {
+        	font-size: 24px;   
+    	}
+		@include media('<tablet') {
+         	font-size: 20px;
+         	width: 100%;  
+    	}
+		@include media('<phone') {
+        	font-size: 16px;   
+    	}
 	}
 }
+
+.about-us-page {
+	footer {
+		.bottom-right {
+			justify-content: space-between;
+			.social-list {
+				li {
+					margin-left: 10px;
+					a {
+						display: inline-flex;
+						justify-content: center;
+						align-items: center;
+						background-color: $orange;
+						border-radius: 50px;
+						width: 28px;
+						height: 28px;
+						&:hover {
+							color: $dark;
+						}
+						i {
+							font-size: 16px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 
 .pull-left {
 	float: left;
@@ -128,4 +307,3 @@ $gray-semi-light:                               #e4e4e4;
 .pull-right {
 	float: right;
 }
-
