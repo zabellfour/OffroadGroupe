@@ -150,6 +150,15 @@ $gray-semi-light:                               #e4e4e4;
 .photos-block {
 	background-color: $gray-semi-light;
 	padding: 120px 0;
+	@include media('<desktop') {
+			padding: 100px 0;     
+		}
+	@include media('<tablet') {
+			padding: 70px 0;     
+		}
+	@include media('<tablet') {
+			padding: 25px 0;     
+		}
 	.panorama-img-lg {
 		width: 100%;
 		margin-bottom: 20px;
@@ -282,12 +291,13 @@ $gray-semi-light:                               #e4e4e4;
 						display: inline-flex;
 						justify-content: center;
 						align-items: center;
+						color: $dark1;
 						background-color: $orange;
 						border-radius: 50px;
 						width: 28px;
 						height: 28px;
 						&:hover {
-							color: $dark;
+							color: $white;
 						}
 						i {
 							font-size: 16px;
