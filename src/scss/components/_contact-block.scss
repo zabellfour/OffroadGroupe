@@ -9,8 +9,8 @@
 		@extend %clearfix;
 		@include media('<tablet') {
         	padding: 35px 0 20px 0;
-        	padding-left: 12%;
-			padding-right: 12%;
+        	padding-left: 15px;
+			padding-right: 15px;
     	}
 	}
 	.social-block {
@@ -21,6 +21,10 @@
 			li {
 				a {
 					color: $gray;
+					transition: color .3s;
+					&:hover {
+						color: $orange;
+					}
 				}
 			}
 		}
@@ -155,12 +159,15 @@
         	}
         	@include media('<tablet') {
            		font-size: 16px;
+           		padding: 10px 30px;
+           		margin-bottom: 15px;
         	}
 		@include placeholder {
     	color: $gray;
     	font-family: $base-font-serif;
     	font-style: italic;
     	font-size: 24px;
+    	vertical-align: middle;
     		@media screen and (max-width: 1431px) {
 				font-size: 20px;
         	}

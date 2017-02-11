@@ -146,11 +146,20 @@
 		flex-direction: column;
 		padding-left: 35px;
 		margin-bottom: 25px;
+		span {
+			display: block;
+			line-height: 1;
+			a {
+				line-height: 1.5;
+				vertical-align: middle;
+			}
+		}
 		@include media('<desktop') {
            	padding-left: 30px;
         }
 		@include media('<tablet') {
            	padding-left: 25px;
+           	margin-bottom: 15px;
         }
 		.icon {
 			position: absolute;
