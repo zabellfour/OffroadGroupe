@@ -2,7 +2,60 @@
     background-image: url(../images/texture.jpg);
     background-repeat: repeat;
     background-position: 0 0;
-    padding: 132px 0;
+    padding: 132px 0 178px;
+    @include media('<widescreen') {
+        padding: 100px 0;
+    }
+    @include media('<desktop') {
+        padding: 50px 0 90px;
+    }
+    .h3 + &-body {
+        margin-top: -69px;
+        @include media('<desktop') {
+            margin-top: -30px;
+        }
+    }
+    .link-to-page {
+        color: $white;
+        &:hover{
+            color: $turquoise;
+        }
+    }
+    &-body + .link-to-page {
+        margin-top: 29px;
+    }
+    .h3 {
+        text-align: center;
+        display: inline-block;
+        padding: 32px 11px 36px;
+        font-size: 44px;
+        min-width: 382px;
+        text-transform: uppercase;
+        background-color: rgba($turquoise, .9);
+        color: $white;
+        margin: 0 0 0 204px;
+        font-weight: 500;
+        letter-spacing: 3.5px;
+        position: relative;
+        z-index: 550;
+        @include media('<widescreen-lg') {
+            margin: 0;
+            min-width: 400px;
+        }
+        @include media('<widescreen') {
+            letter-spacing: 1px;
+        }
+        @include media('<desktop') {
+            letter-spacing: 0;
+            font-size: 24px;
+            padding: 10px;
+        }
+         @include media('<tablet') {
+                min-width: 0;
+         
+         }
+                    
+    }
     .images-wrapper {
         display: flex;
         align-items: center;
@@ -12,6 +65,9 @@
             width: 24.5%;
             margin-bottom: 16px;
             position: relative;
+            @include media('<desktop') {
+                margin-bottom: 8px;
+            }
             &:before {
                 @include animate(opacity transform);
                 color: $white;
@@ -78,15 +134,20 @@
     .videos-wrapper {
         display: flex;
         align-items: center;
-        flex-wrap: wrap;	
+        flex-wrap: wrap;
         justify-content: space-between;
         .fancybox {
             width: 49.75%;
-            position: relative;	
+            position: relative;
             margin-bottom: 16px;
             max-height: 390px;
             overflow: hidden;
-             &:before {
+             @include media('<desktop') {
+            margin-bottom: 8px; 
+             
+             }
+                        
+            &:before {
                 @include animate(opacity transform);
                 color: $white;
                 display: flex;
@@ -112,13 +173,13 @@
                 font-size: 40px;
             }
             &:after {
-            	@include animate(opacity);
+                @include animate(opacity);
                 content: '';
                 width: 84px;
                 height: 84px;
                 background-color: rgba($turquoise, .7);
                 border-radius: 50%;
-                display: inline-block;	
+                display: inline-block;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -134,7 +195,7 @@
                     transform: scale(1) rotate(0deg);
                 }
                 &:after {
-                	opacity: 1;
+                    opacity: 1;
                 }
             }
             img {

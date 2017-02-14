@@ -20,13 +20,29 @@
     }
     .glitch {
         position: absolute;
-        bottom: 200px;
+        bottom: 166px;
         left: 0;
         right: 0;
         margin: 0 auto;
+        letter-spacing: 4.5px;
+        font-weight: 400;
         z-index: 16;
         font-size: 36px;
         text-transform: uppercase;
+        padding: 0 15px;
+        @include media('<desktop') {
+            font-size: 30px;
+            animation: none;
+            height: auto;
+            letter-spacing: 2px;
+        }
+        @include media('<tablet') {
+            font-size: 22px;
+            bottom: auto;
+            top: 65%;
+            letter-spacing: 1px;
+            transform: translateY(-50%);
+        }
     }
     .video-holder {
         position: absolute;
@@ -48,6 +64,15 @@
         animation: arr-down 2s infinite ease-in-out alternate-reverse;
         border-color: $white;
         z-index: 16;
+        @include media('<desktop') {
+            height: 50px;
+        }
+        @include media('<tablet') {
+            height: 30px;
+        }
+        @include media('<phone') {
+            height: 20px;
+        }
         &:hover {
             border-color: $orange;
         }
@@ -71,13 +96,14 @@
     left: 0;
     right: 0;
     bottom: 0;
+    @include media('<desktop') {
+        display: none;
+    }
     .video-js {
         width: 100%;
         height: 100vh;
     }
 }
-
-
 
 @keyframes arr-down {
     0% {

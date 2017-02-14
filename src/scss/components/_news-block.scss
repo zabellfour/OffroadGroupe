@@ -1,65 +1,70 @@
 .news {
-	position: relative;
-	z-index: 11;
-	padding-top: 200px;
-	padding-bottom: 150px;
-	background: $white;
-	@include media('<widescreen') {
-			padding-top: 120px;
-       		padding-bottom: 100px;
-    	}
-    	@include media('<desktop') {
-    		padding-top: 60px;
-        	padding-bottom: 50px;
-    	}
-		@include media('<tablet') {
-			padding-top: 35px;
-			padding-bottom: 50px;
-    	}
-	.container {
-		@extend %clearfix;
-	}
-	.section-title-row {
-		width: 100%;
-		.title-holder {
-			width: 50%;
-			@include media('<tablet') {
-           		width: 100%;
-        	}
-		}
-		h3 {
-		min-width: 50%;	
-		position: relative;
-		z-index: 500;
-		text-align: center;
-	    display: inline-block;
-	    padding: 42px;
-	    text-transform: uppercase;
-	    background-color: rgba(29, 124, 123, 0.9);
-	    font-size: 48px;
-	    font-weight: 500;
-	    color: #fff;
-	    margin: 0;
-	    margin-left: 24%; 
-	    @include media('<widescreen') {
-           		font-size: 30px;
-           		padding: 24px;
-        	}
-    	@include media('<desktop') {
-           		font-size: 24px;
-           		padding: 18px;
-        	}
-        @include media('<tablet') {
-           		font-size: 18px;
-        	}
-		}	
-	}
+    position: relative;
+    z-index: 11;
+    padding-top: 130px;
+    padding-bottom: 150px;
+    background: $white;
+    @include media('<widescreen') {
+        padding-top: 120px;
+        padding-bottom: 100px;
+    }
+    @include media('<desktop') {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+    @include media('<tablet') {
+        padding-top: 35px;
+        padding-bottom: 50px;
+    }
+    .container {
+        @extend %clearfix;
+    }
+    .section-title-row {
+        width: 100%;
+        .title-holder {
+            width: 50%;
+            @include media('<tablet') {
+                width: 100%;
+            }
+        }
+        h3 {
+            min-width: 376px;
+            position: relative;
+            z-index: 500;
+            text-align: center;
+            display: inline-block;
+            padding: 33px 0;
+            text-transform: uppercase;
+            background-color: rgba(29, 124, 123, 0.9);
+            font-size: 48px;
+            font-weight: 500;
+            color: #fff;
+            margin: 0;
+            margin-left: 26%;
+            letter-spacing: 5px;
+            @include media('<widescreen') {
+                font-size: 30px;
+                padding: 24px;
+            }
+            @include media('<desktop') {
+                letter-spacing: 0;
+                font-size: 24px;
+                padding: 10px;
+                margin-left: 0;
+            }
+            @include media('<tablet') {
+                font-size: 24px;
+                text-align-last: auto;	
+                min-width: 0;
+            }
+        }
+    }
 }
 
 .thumbs-holder {
-	position: relative;
-	margin-top: -69px;
-	@include media('<widescreen') {
+    position: relative;
+    margin-top: -69px;
+    @include media('<widescreen') {
         margin-top: -46px;
     }
     @include media('<desktop') {
@@ -68,203 +73,210 @@
 }
 
 .news-thumb {
-		width: 49%;
-		float: left;
-		margin-bottom: 110px;
-		@include media('<widescreen') {
-       		margin-bottom: 70px;
-    	}
-    	@include media('<desktop') {
-        	margin-bottom: 35px;
-    	}
-		@include media('<tablet') {
-        	width: 100%;
-    	}
-	&:nth-child(odd) {
-		margin-right: 2%;
-		}
-	.divider {
-		display: block;
-		width: 25px;
-		background-color: $black;
-		margin: 100px 0px 30px 0px;
-		@include media('<widescreen') {
-        	margin: 70px 0px 30px 0px;
-    	}
-    	@include media('<tablet') {
-        	margin: 50px 0px 30px 0px;
-    	}
-	}
+    width: 49.5%;
+    float: left;
+    margin-bottom: 107px;
+    @include media('<widescreen') {
+        margin-bottom: 70px;
+    }
+    @include media('<desktop') {
+        margin-bottom: 35px;
+    }
+    @include media('<tablet') {
+        width: 100%;
+    }
+    &:nth-child(odd) {
+        margin-right: 1%;
+    }
+    .divider {
+        display: block;
+        width: 25px;
+        background-color: $black;
+        margin: 100px 0px 28px 0px;
+        @include media('<widescreen') {
+            margin: 50px 0px 20px 0px;
+        }
+        @include media('<tablet') {
+            margin: 50px 0px 30px 0px;
+        }
+    }
 }
 
-
 .news-picture {
-	position: relative;
-	img {
-		width: 100%;
-		height: auto;
-		vertical-align: top;
-	}
-	.picture-overlay {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		height: 12%;
-		background:rgba(255,255,255, 0.7);
-		@include media('<tablet') {
-	        display: none;
-    	}
-	}
+    position: relative;
+    img {
+        width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
+    .picture-overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 11%;
+        background: rgba(255, 255, 255, 0.7);
+        @include media('<tablet') {
+            display: none;
+        }
+    }
 }
 
 .news-date {
-	position: absolute;
-	bottom: 100px;
-	left: 60px;
-	font-size: 22px;
-	font-family: $base-font-serif;
-	font-weight: 700;
-	color: $white;
-	@include media('<widescreen') {
+    position: absolute;
+    bottom: 98px;
+    left: 61px;
+    font-size: 22px;
+    font-family: $base-font-serif;
+    font-weight: 700;
+    color: $white;
+    letter-spacing: 0.5px;
+    @include media('<widescreen') {
         font-size: 20px;
         bottom: 60px;
-		left: 30px;
+        left: 30px;
     }
     @include media('<tablet') {
         font-size: 16px;
         bottom: 15%;
-		left: 3%;
+        left: 3%;
     }
 }
 
 .news-title {
-	@extend %clearfix;
-	padding-left: 60px;
-	strong {
-		display: inline-block;
-		position: absolute;
-		bottom: -60px;
-		font-size: 42px;
-		font-family: $base-font-serif;
-		font-weight: 700;
-		line-height: 1;
-		color: $black;
-		z-index: 10;
-		@include media('<widescreen') {
-        	font-size: 30px;
-        	bottom: -43px;
+    @extend %clearfix;
+    padding-left: 60px;
+    strong {
+        display: inline-block;
+        position: absolute;
+        bottom: -70px;
+        font-size: 42px;
+        font-family: $base-font-serif;
+        font-weight: 700;
+        line-height: 1.15;
+        color: $black;
+        z-index: 10;
+        padding-right: 15px;
+        @include media('<widescreen-lg') {
+            font-size: 30px;
         }
-    	@include media('<desktop') {
-    		font-size: 24px;		
+        @include media('<widescreen') {
+            font-size: 30px;
+        }
+        @include media('<desktop') {
+            font-size: 20px;
+            bottom: -73px;
         }
         @include media('<tablet') {
-           	bottom: -50px;
+            bottom: -70px;
         }
         @include media('<phone') {
-           font-size: 18px;
-           bottom: -40px;
-           
+            font-size: 18px;
+            bottom: -65px;
         }
-	}
+    }
 }
 
 .news-content {
-	min-height: 185px;
-	position: relative;
-	padding-left: 60px;
-		@include media('<widescreen') {
-           font-size: 20px;
-           margin-bottom: 35px;
+    min-height: 185px;
+    position: relative;
+    padding: 0 70px 28px 60px;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    @include media('<widescreen') {
+        font-size: 20px;
+        margin-bottom: 35px;
+    }
+    @include media('<desktop') {
+        font-size: 16px;
+        margin-bottom: 25px;
+        min-height: 125px;
+    }
+    @include media('<tablet') {
+        font-size: 13px;
+        margin-bottom: 20px;
+        min-height: 90px;
+        padding-left: 0;
+        padding-right: 0;	
+    }
+    p {
+        margin-bottom: 45px;
+        @include media('<widescreen') {
+            font-size: 20px;
+            margin-bottom: 35px;
         }
-    	@include media('<desktop') {
-           font-size: 16px;
-           margin-bottom: 25px;
-           min-height: 125px;
+        @include media('<desktop') {
+            font-size: 16px;
+            margin-bottom: 15px;
         }
         @include media('<tablet') {
-           font-size: 13px;
-           margin-bottom: 20px;
-           min-height: 90px;
+            font-size: 13px;
+            margin-bottom: 10px;
         }
-	p {
-		margin-bottom: 45px;
-		@include media('<widescreen') {
-           font-size: 20px;
-           margin-bottom: 35px;
+    }
+    .news-link {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-family: $base-font-serif;
+        font-weight: 700;
+        font-style: italic;
+        padding-left: 60px;
+        @include media('<widescreen') {
+            font-size: 20px;
         }
-    	@include media('<desktop') {
-           font-size: 16px;
-           margin-bottom: 25px;
-        }
-        @include media('<tablet') {
-           font-size: 13px;
-           margin-bottom: 20px;
-        }
-	}
-	.news-link {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		font-family: $base-font-serif;
-		font-weight: 700;
-		font-style: italic;
-		padding-left: 60px;
-		@include media('<widescreen') {
-           font-size: 20px;
-        }
-    	@include media('<desktop') {
-           font-size: 16px;
+        @include media('<desktop') {
+            font-size: 16px;
         }
         @include media('<phone') {
-           font-size: 13px;
+            font-size: 13px;
         }
-	}
+    }
 }
 
 .link-to-page {
-	padding-left: 90px;
-	display: inline-block;
-	float: left;
-	position: relative;
-	text-decoration: none;
-	font-size: 28px;
-	font-weight: 700;
-	color: $dark;
-	transition: color .5s;
-	@include media('<widescreen') {
-           font-size: 24px;
-        }
-    	@include media('<desktop') {
-           font-size: 20px;
-           padding-left: 65px;
-        }
-        @include media('<tablet') {
-           font-size: 16px;
-        } 
-        @include media('<phone') {
-           font-size: 14px;
-        }
-	&:hover {
-		color: $turquoise;
-
-	}
-	i{
-		position: absolute;
-		font-size: 78px;
-		left: 0;
-		top: -42%;
-		@include media('<widescreen') {
-           top: -55%;
+    padding-left: 90px;
+    display: inline-block;
+    float: left;
+    position: relative;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 500;
+    color: $dark;
+    transition: color .5s;
+    letter-spacing: 0;
+    @include media('<widescreen') {
+        font-size: 24px;
+    }
+    @include media('<desktop') {
+        font-size: 20px;
+        padding-left: 65px;
+    }
+    @include media('<tablet') {
+        font-size: 16px;
+    }
+    @include media('<phone') {
+        font-size: 14px;
+    }
+    &:hover {
+        color: $turquoise;
+    }
+    i {
+        position: absolute;
+        font-size: 78px;
+        left: 0;
+        top: -42%;
+        @include media('<widescreen') {
+            top: -55%;
         }
         @include media('<desktop') {
-           font-size: 54px;
-           top: -38%;
+            font-size: 54px;
+            top: -38%;
         }
         @include media('<tablet') {
-           top: -58%;
+            top: -58%;
         }
         @include media('<phone') {
-           top: -75%;
+            top: -75%;
         }
-	}
+    }
 }

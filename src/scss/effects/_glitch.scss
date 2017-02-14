@@ -48,6 +48,9 @@
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
+    @include media('<desktop') {
+        display: none;
+    }
 }
 
 @keyframes noise-anim-2 {
@@ -72,6 +75,10 @@
     overflow: hidden;
     clip: rect(0, 900px, 0, 0);
     animation: noise-anim-2 3s infinite linear alternate-reverse;
-    text-align: center;    white-space: nowrap;
+    text-align: center;
+    white-space: nowrap;
     overflow: hidden;
+    @include media('<desktop') {
+        display: none;
+    }
 }

@@ -13,13 +13,13 @@
     line-height: 0;
     opacity: 0;
     width: 1px;
-    height: 1px;	    
-}
-.dark-bg{
-	background-color: $dark1;
-	color: $gray;
+    height: 1px;
 }
 
+.dark-bg {
+    background-color: $dark1;
+    color: $gray;
+}
 
 main {
     background-color: $white;
@@ -27,27 +27,35 @@ main {
     position: relative;
     z-index: 11;
 }
-.zix1{
-	position: relative;
-	z-index: 100;
+
+.zix1 {
+    position: relative;
+    z-index: 100;
 }
-.zix2{
-	position: relative;
-	z-index: 200;
+
+.zix2 {
+    position: relative;
+    z-index: 200;
 }
-.zix3{
-	position: relative;
-	z-index: 300;
+
+.zix3 {
+    position: relative;
+    z-index: 300;
 }
-.zix4{
-	position: relative;
-	z-index: 400;
+
+.zix4 {
+    position: relative;
+    z-index: 400;
 }
-.zix5{
-	position: relative;
-	z-index: 500;
+
+.zix5 {
+    position: relative;
+    z-index: 500;
 }
-.zix6{
-	position: relative;
-	z-index: 600;
+
+.zix6 {
+    position: relative;
+    z-index: 600;
 }
+
+
