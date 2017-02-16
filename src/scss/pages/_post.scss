@@ -1,0 +1,228 @@
+.post-body {
+    padding: 0 9.3%;
+    color: $dark1;
+    @include media('<desktop') {
+        padding: 0;
+    }
+    h2 {
+        margin-bottom: 22px;
+    }
+    p {
+        margin-bottom: 38px;
+        @include media('<widescreen') {
+            margin-bottom: 20px;
+        }
+    }
+    .tag {
+        position: absolute;
+        top: 8%;
+        left: 5%;
+        display: inline-block;
+        background-color: $turquoise;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 6px 10px;
+        min-width: 130px;
+        color: $white;
+        text-align: center;
+        letter-spacing: 5px;
+        font-family: $base-font-sans-serif;
+        @include media('<desktop') {
+            font-size: 16px;
+        }
+    }
+    .post-header {
+        position: relative;
+        font-family: $base-font-serif;
+        margin-bottom: 74px;
+        @include media('<widescreen') {
+            margin-bottom: 50px;
+        }
+        @include media('<desktop') {
+            font-size: 30px;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        .post-info {
+            font-size: 24px;
+            color: $white;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #353535;
+            padding: 35px 60px;
+            @include media('<widescreen') {
+                padding: 20px 30px;
+            }
+            @include media('<desktop') {
+                position: static;
+                font-size: 18px;
+                padding: 15px;
+            }
+            @include media('<tablet') {
+                font-size: 16px;
+            }
+            a {
+                @include animate(color);
+                color: inherit;
+                text-decoration: none;
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+        .social-share {
+            @include animate(color);
+            position: absolute;
+            top: 58%;
+            right: 54px;
+            transform: translateY(-50%);
+            font-size: 40px;
+            color: $white;
+            cursor: pointer;
+            @include media('<tablet') {
+                top: 30px;
+                right: 30px;
+                font-size: 30px;
+            }
+            &:hover {
+                color: $orange;
+            }
+        }
+        .post-heading {
+            font-size: 42px;
+            @include media('<1500px') {
+                font-size: 30px;
+            }
+            @include media('<widescreen') {
+                font-size: 24px;
+            }
+            @include media('<desktop') {
+                font-size: 18px;
+            }
+            @include media('<tablet') {
+                font-size: 16px;
+            }
+        }
+        time {
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
+    article {
+        @extend %clearfix;
+        padding: 0 4.5%;
+        line-height: 1.7;
+        @include media('<widescreen') {
+            line-height: 1.2;
+            font-size: 18px;
+        }
+        @include media('<tablet') {
+            padding: 0;
+            font-size: 16px;
+        }
+        img {
+            vertical-align: top;
+            margin-bottom: 57px;
+            @include media('<widescreen') {
+                margin-bottom: 15px;
+            }
+            @include media('<desktop') {
+                margin-bottom: 10px;
+            }
+        }
+        .fullwidth {
+            width: 100%;
+            max-width: none;
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 57px;
+            @include media('<widescreen') {
+                margin-bottom: 15px;
+            }
+            @include media('<desktop') {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .holder {
+        @extend %clearfix;
+        padding-top: 26px;
+    }
+}
+
+.share-art {
+    color: $dark1;
+    padding: 50px 0 215px;
+    text-align: center;
+    @include media('<widescreen') {
+        padding: 20px 0 100px;
+    }
+    @include media('<desktop') {
+        padding: 20px 0 50px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    .top {
+        position: relative;
+        padding-bottom: 10px;
+        &:after {
+            content: '';
+            position: absolute;
+            max-width: 237px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            height: 1px;
+            background-color: $dark1;
+            bottom: 0;
+        }
+    }
+    .social-list {
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 0;
+        a {
+            @include animate(color);
+            color: inherit;
+            display: inline-block;
+            margin: 0 7px;
+            font-size: 28px;
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+}
+
+.alignleft {
+    float: left;
+    max-width: 49%;
+    margin-bottom: 20px;
+    @include media('<widescreen') {
+        margin-bottom: 15px;
+    }
+    @include media('<desktop') {
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: none;
+    }
+}
+
+.alignright {
+    float: right;
+    margin-bottom: 20px;
+    max-width: 49%;
+    @include media('<widescreen') {
+        margin-bottom: 15px;
+    }
+    @include media('<desktop') {
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: none;
+    }
+}
