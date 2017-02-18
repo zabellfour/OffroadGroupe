@@ -13,105 +13,6 @@
             margin-bottom: 20px;
         }
     }
-    .tag {
-        position: absolute;
-        top: 8%;
-        left: 5%;
-        display: inline-block;
-        background-color: $turquoise;
-        text-transform: uppercase;
-        font-size: 18px;
-        padding: 6px 10px;
-        min-width: 130px;
-        color: $white;
-        text-align: center;
-        letter-spacing: 5px;
-        font-family: $base-font-sans-serif;
-        @include media('<desktop') {
-            font-size: 16px;
-        }
-    }
-    .post-header {
-        position: relative;
-        font-family: $base-font-serif;
-        margin-bottom: 74px;
-        @include media('<widescreen') {
-            margin-bottom: 50px;
-        }
-        @include media('<desktop') {
-            font-size: 30px;
-        }
-        img {
-            vertical-align: top;
-            width: 100%;
-        }
-        .post-info {
-            font-size: 24px;
-            color: $white;
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #353535;
-            padding: 35px 60px;
-            @include media('<widescreen') {
-                padding: 20px 30px;
-            }
-            @include media('<desktop') {
-                position: static;
-                font-size: 18px;
-                padding: 15px;
-            }
-            @include media('<tablet') {
-                font-size: 16px;
-            }
-            a {
-                @include animate(color);
-                color: inherit;
-                text-decoration: none;
-                &:hover {
-                    color: $orange;
-                }
-            }
-        }
-        .social-share {
-            @include animate(color);
-            position: absolute;
-            top: 58%;
-            right: 54px;
-            transform: translateY(-50%);
-            font-size: 40px;
-            color: $white;
-            cursor: pointer;
-            @include media('<tablet') {
-                top: 30px;
-                right: 30px;
-                font-size: 30px;
-            }
-            &:hover {
-                color: $orange;
-            }
-        }
-        .post-heading {
-            font-size: 42px;
-            @include media('<1500px') {
-                font-size: 30px;
-            }
-            @include media('<widescreen') {
-                font-size: 24px;
-            }
-            @include media('<desktop') {
-                font-size: 18px;
-            }
-            @include media('<tablet') {
-                font-size: 16px;
-            }
-        }
-        time {
-            display: block;
-            margin-bottom: 8px;
-        }
-    }
     article {
         @extend %clearfix;
         padding: 0 4.5%;
@@ -151,6 +52,106 @@
     .holder {
         @extend %clearfix;
         padding-top: 26px;
+    }
+}
+
+.post-header {
+    position: relative;
+    font-family: $base-font-serif;
+    margin-bottom: 74px;
+    @include media('<widescreen') {
+        margin-bottom: 50px;
+    }
+    @include media('<desktop') {
+        font-size: 30px;
+    }
+    img {
+        vertical-align: top;
+        width: 100%;
+    }
+    .tag {
+        position: absolute;
+        top: 8%;
+        left: 5%;
+        display: inline-block;
+        background-color: $turquoise;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 6px 10px;
+        min-width: 130px;
+        color: $white;
+        text-align: center;
+        letter-spacing: 5px;
+        font-family: $base-font-sans-serif;
+        @include media('<desktop') {
+            font-size: 16px;
+        }
+    }
+    .post-info {
+        font-size: 24px;
+        color: $white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #353535;
+        padding: 35px 60px;
+        @include media('<widescreen') {
+            padding: 20px 30px;
+        }
+        @include media('<desktop') {
+            position: static;
+            font-size: 18px;
+            padding: 15px;
+        }
+        @include media('<tablet') {
+            font-size: 16px;
+        }
+        a {
+            @include animate(color);
+            color: inherit;
+            text-decoration: none;
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+    .social-share {
+        @include animate(color);
+        position: absolute;
+        top: 58%;
+        right: 54px;
+        transform: translateY(-50%);
+        font-size: 40px;
+        color: $white;
+        cursor: pointer;
+        @include media('<tablet') {
+            top: 30px;
+            right: 30px;
+            font-size: 30px;
+        }
+        &:hover {
+            color: $orange;
+        }
+    }
+    .post-heading {
+        font-size: 42px;
+        @include media('<1500px') {
+            font-size: 30px;
+        }
+        @include media('<widescreen') {
+            font-size: 24px;
+        }
+        @include media('<desktop') {
+            font-size: 18px;
+        }
+        @include media('<tablet') {
+            font-size: 16px;
+        }
+    }
+    time {
+        display: block;
+        margin-bottom: 8px;
     }
 }
 
@@ -224,5 +225,214 @@
         margin-bottom: 10px;
         width: 100%;
         max-width: none;
+    }
+}
+
+.post-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 0 75px;
+    flex-wrap: wrap;
+    @include media('<widescreen') {
+        padding: 50px 0;
+    }
+    @include media('<desktop') {
+        padding: 25px 0;
+    }
+    @include media('<phone') {
+        justify-content: flex-start;
+    }
+    .breadcrumbs {
+        padding: 0;
+    }
+}
+
+.post-category {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 24px;
+    flex-wrap: wrap;
+    @include media('<desktop') {
+        font-size: 18px;
+    }
+    @include media('<tablet') {
+        font-size: 14px;
+    }
+    @include media('<phone') {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .filter-by {
+        color: $turquoise;
+    }
+    &-list {
+        @extend %listreset;
+        padding: 0 10px 0 62px;
+        @include media('<widescreen') {
+            padding: 0 0 0 20px;
+        }
+        @include media('<tablet') {
+            padding: 0 5px;
+            font-size: 14px;
+        }
+        li {
+            display: inline-block;
+            padding: 0 40px;
+            @include media('<widescreen') {
+                padding: 0 20px;
+            }
+            @include media('<desktop') {
+                padding: 0 10px;
+            }
+            @include media('<tablet') {
+                padding: 0 5px;
+                font-size: 14px;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+            a {
+                @include animate(color);
+                color: $dark1;
+                text-decoration: none;
+                position: relative;
+                display: inline-block;
+                font-size: 23px;
+                line-height: 1;
+                @include media('<desktop') {
+                    font-size: 18px;
+                }
+                @include media('<tablet') {
+                    font-size: 14px;
+                }
+                &:hover {
+                    color: $orange;
+                }
+                &:after {
+                    position: absolute;
+                    left: -8px;
+                    right: -8px;
+                    bottom: -10px;
+                    height: 2px;
+                    background: #403f41;
+                    @include media('<desktop') {
+                        left: 0;
+                        right: 0;
+                        bottom: -4px;
+                    }
+                }
+            }
+            &.active a {
+                &:hover {
+                    color: $dark1;
+                }
+                &:after {
+                    content: '';
+                }
+            }
+        }
+    }
+}
+
+.post-thumb {
+    @extend .post-header;
+    width: 48.8%;
+    margin-bottom: 80px;
+    @include media('<widescreen') {
+        margin-bottom: 40px;
+    }
+    @include media('<desktop') {
+        margin-bottom: 30px;
+    }
+    @include media('<tablet') {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .post-heading {
+        font-size: 24px;
+        max-width: 300px;
+        display: inline-block;
+        line-height: 1.35;
+        margin-bottom: 15px;
+        padding-right: 50px;
+        @include media('<widescreen') {
+            font-size: 18px;
+        }
+        @include media('<desktop') {
+            max-width: 250px;
+            font-size: 16px;
+            padding-right: 70px;
+        }
+    }
+    .post-info {
+        position: static;
+        font-size: 20px;
+        position: relative;
+        padding: 25px 49px;
+        @include media('<widescreen') {
+            padding: 10px 20px;
+            font-size: 15px;
+        }
+    }
+    .img-holder {
+        height: 360px;
+        @include media('<desktop') {
+            height: 200px;
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .short-descr {
+        margin-bottom: 0;
+        color: $turquoise;
+        display: block;
+    }
+    time {
+        position: absolute;
+        top: 27px;
+        left: auto;
+        right: 50px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        @include media('<widescreen') {
+            font-size: 16px;
+            right: 10px;
+            top: 10px;
+        }
+    }
+    .tag {
+        left: auto;
+        right: 50px;
+        top: 10%;
+        @include media('<widescreen') {
+            top: 10px;
+            right: 10px;
+        }
+        @include media('<tablet') {
+            left: 10px;
+            right: auto;
+        }
+    }
+}
+
+.post-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .text-center {
+        text-align: center;
+        width: 100%;
+        padding-bottom: 100px;
+        @include media('<desktop') {
+            padding-bottom: 50px;
+        }
+        @include media('<tablet') {
+            padding-bottom: 30px;
+        }
     }
 }

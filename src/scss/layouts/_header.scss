@@ -10,7 +10,7 @@
     }
     @include media('<tablet') {
         padding-top: 10px;
-        padding-bottom: 10px;   
+        padding-bottom: 10px;
     }
     .header-holder {
         display: flex;
@@ -49,6 +49,9 @@
     height: 30px;
     position: relative;
     border-radius: 3px;
+    @include media('<tablet') {
+        order: 1;
+    }
     .symbol:before {
         @include animate(box-shadow transform);
         transform: translate(0deg);
@@ -90,6 +93,9 @@
 .header-menu {
     @extend %listreset;
     @extend %clearfix;
+    @include media('<tablet') {
+        order: -10;
+    }
     li {
         display: inline-block;
         padding: 0 0 0 80px;
@@ -113,7 +119,7 @@
         left: 0;
         right: 0;
         bottom: 100%;
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .8);
         display: inline-block;
     }
     @include media('<tablet') {
@@ -125,7 +131,7 @@
         top: 0;
         margin-top: -100%;
         padding: 0px 15px 15px;
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .8);
         z-index: -1;
     }
     .nav-open & {
