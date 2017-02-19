@@ -1,3 +1,13 @@
+jQuery(document).ready(function($) {
+    $(window).load(function() {
+        setTimeout(function() {
+            $('.preloader').fadeOut('slow', function() {});
+        }, 500);
+
+    });
+});
+
+
 (function($) {
 
     // When DOM is ready
@@ -24,6 +34,7 @@ $(document).ready(function() {
 });
 
 
+
 $(document).ready(function() {
     $.fancybox({
         maxWidth: 1000,
@@ -42,43 +53,48 @@ $(document).ready(function() {
         horizontalScrolling: false
 
     });
+    if ($("#map").length) {
+        jQuery(function() {
+            initCustomMap();
+        });
 
-    jQuery(function() {
-        initCustomMap();
+    }
+
+});
+
+
+
+function setMapEvents() {
+    jQuery('#map').css("pointer-events", "none");
+    jQuery('.map-holder').on("click", function() {
+        jQuery('#map').css("pointer-events", "auto");
     });
 
-    function setMapEvents() {
-        jQuery('#map').css("pointer-events", "none");
-        jQuery('.map-holder').on("click", function() {
-            jQuery('#map').css("pointer-events", "auto");
-        });
 
+    jQuery('#map').on("mouseout", function() {
+        jQuery(this).css("pointer-events", "none");
+    });
+}
 
-        jQuery('#map').on("mouseout", function() {
-            jQuery(this).css("pointer-events", "none");
-        });
-    }
+function initCustomMap() {
+    var myLatLng = { lat: 49.947804, lng: 36.397481 };
 
-    function initCustomMap() {
-        var myLatLng = { lat: 49.947804, lng: 36.397481 };
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 17,
+        center: myLatLng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 17,
-            center: myLatLng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        });
+    var image = {
+        url: 'build/images/logo-map-marker.png'
+    };
 
-        var image = {
-            url: 'build/images/logo-map-marker.png'
-        };
+    var marker = new google.maps.Marker({
+        position: { lat: 49.948401, lng: 36.396368 },
+        map: map,
+        icon: image
+    });
 
-        var marker = new google.maps.Marker({
-            position: { lat: 49.948401, lng: 36.396368 },
-            map: map,
-            icon: image
-        });
+    setMapEvents()
 
-        setMapEvents()
-
-    }
-});
+}
