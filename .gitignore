@@ -24,7 +24,6 @@ node_modules/
 
 # markup
 /build/
-/production/
 bower/
 .sass-cache
 node_modules

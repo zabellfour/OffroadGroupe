@@ -5,6 +5,5 @@ module.exports = [
   './bower/vide/dist/jquery.vide.js',
   './bower/fancybox/source/jquery.fancybox.js',
   './bower/video.js/dist/video.js',
-  './bower/jquery.stellar/src/jquery.stellar.js',
-
+  './bower/jquery.stellar/src/jquery.stellar.js'
 ];

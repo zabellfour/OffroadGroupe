@@ -208,9 +208,12 @@
         }
     }
 }
-
+#fancybox-loading {
+    background-color: transparent;
+}
 #fancybox-loading div {
-    background: url(../images/fancybox_loading.gif) center center no-repeat;
+    background: url(../images/gears.svg) center center no-repeat;
+    background-size:cover;
 }
 
 #fancybox-loading,

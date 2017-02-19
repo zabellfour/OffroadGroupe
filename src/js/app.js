@@ -1,20 +1,13 @@
 jQuery(document).ready(function($) {
-    $(window).load(function() {
+ 
         setTimeout(function() {
             $('.preloader').fadeOut('slow', function() {});
-        }, 500);
+        }, 1000);
 
-    });
-});
-
-
-(function($) {
-
-    // When DOM is ready
-    $(function() {
-        $(".nav-opener").click(function() {
-            $("body").toggleClass("nav-open");
-        });
+   
+    $(".fancybox").fancybox({
+        openEffect: 'none',
+        closeEffect: 'none'
     });
     $(function() {
         smoothScroll.init({
@@ -24,18 +17,11 @@ jQuery(document).ready(function($) {
             offset: 0
         });
     });
-}(jQuery));
-
-$(document).ready(function() {
-    $(".fancybox").fancybox({
-        openEffect: 'none',
-        closeEffect: 'none'
+    $(function() {
+        $(".nav-opener").click(function() {
+            $("body").toggleClass("nav-open");
+        });
     });
-});
-
-
-
-$(document).ready(function() {
     $.fancybox({
         maxWidth: 1000,
         maxHeight: 800,
@@ -57,12 +43,7 @@ $(document).ready(function() {
         jQuery(function() {
             initCustomMap();
         });
-
     }
-
-});
-
-
 
 function setMapEvents() {
     jQuery('#map').css("pointer-events", "none");
@@ -98,3 +79,5 @@ function initCustomMap() {
     setMapEvents()
 
 }
+
+});
